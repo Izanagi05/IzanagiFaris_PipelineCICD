@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brutalist 3D portfolio built with HTML, CSS, and JavaScript." />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Brutal 3D Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-outline" aria-hidden="true"></div>
+
+  <!-- 3D Scene Root -->
+  <div class="scene" id="scene">
+    <div class="scene-depth scene-depth--back" aria-hidden="true"></div>
+    <div class="scene-depth scene-depth--mid" aria-hidden="true"></div>
+    <div class="scene-depth scene-depth--front" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Go to home">
+        <span class="brand-mark">■</span>
+        <span class="brand-text">IZANAGI FARIS ASLAM</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero / 3D Stage -->
+      <section class="hero stage" id="home">
+        <div class="stage-layer stage-layer--far" data-depth="0.15" aria-hidden="true">
+          <span class="floating-tag floating-tag--one">BRUTAL</span>
+          <span class="floating-tag floating-tag--two">3D</span>
+          <span class="floating-tag floating-tag--three">INTERACTIVE</span>
+        </div>
+
+        <div class="stage-layer stage-layer--mid" data-depth="0.35" aria-hidden="true">
+          <div class="grid-lines"></div>
+          <div class="diagonal-shape diagonal-shape--one"></div>
+          <div class="diagonal-shape diagonal-shape--two"></div>
+        </div>
+
+        <div class="stage-content" data-depth="0.6">
+          <p class="eyebrow">PORTFOLIO / SHOWCASE / VANILLA HTML CSS JS</p>
+
+          <h1 class="hero-title">
+            <span class="line">
+              <span class="word">RAW</span>
+              <span class="word">3D</span>
+            </span>
+            <span class="line">
+              <span class="word">BRUTAL</span>
+              <span class="word">INTERFACE</span>
+            </span>
+          </h1>
+
+          <p class="hero-desc">
+            A layered portfolio experience with depth, motion, and cursor-driven interaction.
+            Built for bold presentation and experimental front-end styling.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#works">View Works</a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="stage-layer stage-layer--front" data-depth="0.9" aria-hidden="true">
+          <div class="orbit orbit--one"></div>
+          <div class="orbit orbit--two"></div>
+          <div class="orbit orbit--three"></div>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          <span>SCROLL</span>
+          <span>↓</span>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section about" id="about">
+        <div class="section-head">
+          <p class="section-index">01</p>
+          <h2 class="section-title">About</h2>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-copy">
+            <p>
+              I create bold web interfaces that feel tactile, dimensional, and direct.
+              The style mixes brutalism with layered 3D motion for a sharper visual identity.
+            </p>
+          </div>
+
+          <div class="about-aside">
+            <div class="meter">
+              <span class="meter-label">DEPTH</span>
+              <div class="meter-bar"><span class="meter-fill" data-fill="90"></span></div>
+            </div>
+
+            <div class="meter">
+              <span class="meter-label">MOTION</span>
+              <div class="meter-bar"><span class="meter-fill" data-fill="85"></span></div>
+            </div>
+
+            <div class="meter">
+              <span class="meter-label">BRUTALISM</span>
+              <div class="meter-bar"><span class="meter-fill" data-fill="95"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Works -->
+      <section class="section works" id="works">
+        <div class="section-head">
+          <p class="section-index">02</p>
+          <h2 class="section-title">Works</h2>
+        </div>
+
+        <div class="works-scene">
+          <article class="work-piece work-piece--alpha" data-depth="0.2">
+            <span class="work-code">[01]</span>
+            <h3 class="work-title">Smart Village System</h3>
+            <p class="work-desc">A civic platform concept for announcements, reports, and service flow.</p>
+          </article>
+
+          <article class="work-piece work-piece--beta" data-depth="0.4">
+            <span class="work-code">[02]</span>
+            <h3 class="work-title">AI Nutrition Analyzer</h3>
+            <p class="work-desc">A conceptual tool for early childhood nutrition pattern analysis.</p>
+          </article>
+
+          <article class="work-piece work-piece--gamma" data-depth="0.6">
+            <span class="work-code">[03]</span>
+            <h3 class="work-title">Ticket Dashboard</h3>
+            <p class="work-desc">A support-tracking interface for priorities, status, and assignments.</p>
+          </article>
+
+          <div class="work-frame work-frame--top" aria-hidden="true"></div>
+          <div class="work-frame work-frame--bottom" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- Stack -->
+      <section class="section stack" id="stack">
+        <div class="section-head">
+          <p class="section-index">03</p>
+          <h2 class="section-title">Stack</h2>
+        </div>
+
+        <div class="stack-ribbon">
+          <div class="stack-item" data-depth="0.15">HTML5</div>
+          <div class="stack-item" data-depth="0.25">CSS3</div>
+          <div class="stack-item" data-depth="0.35">JavaScript</div>
+          <div class="stack-item" data-depth="0.45">Motion</div>
+          <div class="stack-item" data-depth="0.55">Parallax</div>
+          <div class="stack-item" data-depth="0.65">Brutal UI</div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact" id="contact">
+        <div class="section-head">
+          <p class="section-index">04</p>
+          <h2 class="section-title">Contact</h2>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-copy">
+            <p>
+              Open for portfolio work, front-end experiments, and interactive UI collaboration.
+            </p>
+          </div>
+
+          <div class="contact-links">
+            <a href="mailto:yourname@email.com">yourname@email.com</a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 IZANAGI FARIS ASLAM</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
